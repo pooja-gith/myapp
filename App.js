@@ -1,15 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <View style={styles.container}>
+
+        <ImageBackground source={require('./assets/image/tesla.jpg')} 
+        styles={styles.image}
+/>
+       <View style={styles.titles}>
+         <Text style={styles.subtitle}>Model S</Text>
+
+         <Text>Starting at $69.420</Text>
+         </View> 
+      </View>
       <StatusBar style="auto" />
     </View>
   );
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -18,4 +30,32 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  carContainer: {
+   width: '100%',
+   height: '100%',
+
+  },
+  titles: {
+    marginTop: '30%',
+    width: '100%',
+    alignItems: 'center',
+    },
+    subtitle: {
+  },
+  title: {
+  fontSize: 40,
+  fontWeight: '500',
+
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#5c5e62',
+  },
+
+image: {
+  width: '100%',
+  height: '100%',
+
+}
+
 });
